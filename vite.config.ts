@@ -10,7 +10,7 @@ export default defineConfig({
       '@': resolve(__dirname, 'src'),
     },
   },
-  base: process.env.NODE_ENV === 'production' ? '/license-tracker-vite/' : '/',
+  base: process.env.NODE_ENV === 'production' ? '/AssetTracker/' : '/',
   build: {
     outDir: 'dist',
     sourcemap: true,
