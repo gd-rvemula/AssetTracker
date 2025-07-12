@@ -150,8 +150,8 @@ export default function App() {
 
     // Apply sorting
     filtered.sort((a, b) => {
-      let aValue = a[sortBy]
-      let bValue = b[sortBy]
+      let aValue: string | number = a[sortBy] || ""
+      let bValue: string | number = b[sortBy] || ""
 
       if (sortBy === "expiryDate") {
         aValue = new Date(a.expiryDate).getTime()
