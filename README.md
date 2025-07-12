@@ -47,14 +47,17 @@ pnpm preview
 ## 📁 Project Structure
 
 ```
-asset-management-vite/
+AssetTracker/
 ├── src/
 │   ├── components/ui/    # shadcn/ui components
 │   ├── lib/utils.ts      # Utility functions
 │   ├── App.tsx          # Main application
 │   ├── main.tsx         # Entry point
 │   └── index.css        # Global styles
-├── .github/workflows/    # GitHub Actions
+├── data/
+│   └── demo-licenses.ts # Demo license data
+├── scripts/
+│   └── check-expiring-licenses.py # License monitoring script
 ├── public/              # Static assets
 └── dist/                # Build output
 ```
@@ -134,22 +137,6 @@ base: process.env.NODE_ENV === 'production' ? '/your-repo-name/' : '/',
 ## 📄 License
 
 MIT License - see LICENSE file for details
-
-## 🆚 Migration from Next.js
-
-This version is optimized for GitHub Pages hosting:
-
-### ✅ Advantages
-- **Faster builds** - Vite is significantly faster
-- **Smaller bundles** - Better tree shaking
-- **GitHub Pages ready** - No server-side features
-- **Simpler deployment** - Static files only
-
-### 🔄 Migration Notes
-- Removed server-side features (API routes, SSR)
-- Simplified authentication (demo mode only)
-- Optimized for static hosting
-- Maintained all UI functionality
 
 ---
 
